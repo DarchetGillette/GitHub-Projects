@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Lab11 {
+
+	public static void main(String[] args) {
+
+		ArrayList category = new ArrayList();
+		Scanner sc = new Scanner(System.in);
+
+		// Strings
+		String choice1 = "yes";
+		String choice2 = "no";
+		String categorylist;
+
+		// Greets user
+		System.out.println("Welcome to the Movie List Application!");
+		System.out.println();
+
+		System.out.println("There are 10 movies in this list.");
+		System.out.println();
+
+		// Loop
+		do {
+
+			// Starts Array List for movie categories
+			ArrayList<String> comedy = new ArrayList<>();
+			comedy.add("Rush Hour");
+			comedy.add("Longest Yard");
+			comedy.add("Friday");
+
+			ArrayList<String> drama = new ArrayList<>();
+			drama.add("Hardball");
+			drama.add("Titanic");
+			drama.add("Million Dollar Baby");
+
+			ArrayList<String> action = new ArrayList<>();
+			action.add("Transformers");
+			action.add("Avengers");
+
+			ArrayList<String> mystery = new ArrayList<>();
+			mystery.add("Inception");
+			mystery.add("Sherlock Holmes");
+
+			String categoryList = sc.nextLine();
+
+			// Start switch statement
+			switch (categoryList) {
+			case "comedy":
+				System.out.println(comedy);
+				break;
+			case "drama":
+				System.out.println(drama);
+				break;
+			case "action":
+				System.out.println(action);
+				break;
+			case "mystery":
+				System.out.println(mystery);
+				break;
+			}
+
+			// Ask if user wants to know another Category
+			System.out.println("Another Category?(Yes/No)");
+			choice1 = sc.nextLine();
+		} while (choice1.equalsIgnoreCase("yes"));
+
+		// If user enters no the application will close
+		if (choice2.equalsIgnoreCase("no"))
+			;
+
+		{
+			System.out.println("Have a good day");
+		}
+
+	}
+
+}

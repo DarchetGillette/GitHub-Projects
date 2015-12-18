@@ -1,0 +1,85 @@
+import java.util.*;
+
+public class Lab8 {
+
+	public static void main(String[] args) {
+
+		// variables
+		int input;
+		int choice1;
+		String choice2;
+		String choice3;
+		String choice4 = "yes";
+		String choice5 = "no";
+
+		Scanner scan = new Scanner(System.in);
+
+		// Program will loop if user enter yes
+		while (choice4.equalsIgnoreCase("Yes")) {
+
+			System.out.println("Welcome to our Java Class! Which student would you like to learn more about?Enter a number 1-20");
+
+			input = scan.nextInt();
+
+			
+			while
+				((input >= 0 && input <= 20) == true) {
+
+				// Array of names
+				String[] names = { "Mary", "Damon", "John", "Jessica", "Heather", "Pablo", "Darnell", "Ty", "Monique",
+						"Malcom", "Darchet", "Horace", "Bryan", "Kamel", "Charles", "Don", "Lisa", "Taylor", "Aaron",
+						"Joseph", "Cameron"};
+
+				System.out.println("The student you entered is:" + names[input]);
+				System.out.println();
+				System.out.println("What would you like to know about " + names[input]);
+				input = scan.nextInt();
+				scan.next();
+			
+			}
+			 // will take user input and verify it
+			while((input >= 0 && input <= 20)==false) {
+				System.out.println("This student does not exist.Please enter a number 1- 20:");
+				input = scan.nextInt();
+				scan.next();}
+
+			 choice2 = scan.next();
+				String[] names = { "Mary", "Damon", "John", "Jessica", "Heather", "Pablo", "Darnell", "Ty", "Monique",
+						"Malcom", "Darchet", "Horace", "Bryan", "Kamel", "Charles", "Don", "Lisa", "Taylor", "Aaron",
+						"Joseph","Cameron"};
+
+				// Array of hometown's
+				String[] hometown = { "Detroit", "FlatRock", "Southfield", "Romulus", "Hamtramck", "Dearborn", "Rockwood",
+						"Sterling Heights", "Roseville", "Eastpointe", "Chesterfield", "Grand Rapids", "Kalamazoo", "Flint",
+						"Ann Arbor", "Troy", "Livonia", "Novi", "Monroe", "Battle Creek","Mt.Clements"};
+
+			
+			if (choice2.equalsIgnoreCase("hometown")) {
+				System.out.println(names[input] + " is from " + hometown[input]);
+				System.out.println("Would you like to know about another student? (Yes/No)");
+				}
+			
+			else  {
+				System.out.println(	"This data does not exist.(hint)If you would like to know where this student is from enter hometown");
+				choice2 = scan.next();
+			
+				System.out.println(names[input] + " is from " + hometown[input]);
+				System.out.println("Would you like to know about another student? (Yes/No)");
+			}
+		
+			
+			choice4 = scan.next();
+		}
+			// Ask the user if they want to enter another student.
+		
+		// If user does not want to enter another student the program will close
+		if (choice5.equalsIgnoreCase("no")) {
+			System.out.println("Have a Great Day");
+
+		}
+
+	}
+
+
+}
+

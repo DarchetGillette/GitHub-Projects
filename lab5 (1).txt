@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Lab5 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		String choice = "Y";
+
+		// Greets user
+		System.out.println("Welcome to the Grand Circus Park Casino. Roll the dice? Y or N");
+		choice = scan.nextLine();
+		
+		// Loops program if user inouts Y
+		while (choice.equalsIgnoreCase("Y")){
+		
+			//variables
+			int dice1;
+			int dice2;
+			
+			
+			System.out.println(" Your Roll is:");
+			System.out.println();
+
+			dice1 = (int) (Math.random() * 4) + 1;
+			dice2 = (int) (Math.random() * 4) + 1;
+
+			//Results will be printed out to user
+			System.out.println("Your first die is:" + dice1);
+			System.out.println("Your second die is:" + dice2);
+
+			System.out.println("Roll again: (Y/N");
+			choice = scan.nextLine();
+		}
+
+	}
+}
+       
+   double average1 = (double)counter/(double)input;
+   
+    System.out.println("Batting average: " + average1);
+    
+    System.out.println("Slugging Percentage: " + average);
+        }
+    System.out.println("Another batter? " + "(y/n):");
+    choice = scan1.next();
+    System.out.println();
+        }     
+        
+        
+        while (!choice.equalsIgnoreCase("n"));
+    }
+
+    
+}

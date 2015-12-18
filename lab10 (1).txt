@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class ClassProgram {
+
+    public static void main(String[] args) {
+
+        String choice = ("y");
+        
+        do
+        {
+        Scanner scan1 = new Scanner(System.in);
+        
+        System.out.println("Welcome to Batting Average Calculator!");
+        
+        int input;
+        {
+        System.out.println("Enter number of times at bat: ");
+        input = scan1.nextInt();
+        
+       System.out.println("0=out, 1=single, 2=double, 3=triple, 4=home run");
+        
+        int[] array1 = new int[input]; 
+          
+       for(int i = 0; i < input; i++){
+       
+       System.out.println("Result for at-bat " + i + ": ");
+       array1[i] = scan1.nextInt();
+       }
+   int sum = 0;
+   int counter=0;
+   for (int i = 0; i < array1.length; i++){
+       sum = sum + array1[i];
+       if(array1[i]>0)
+           counter++;
+   }
+   
+   
+   double average = (double)sum / (double)array1.length;      
+       
+   double average1 = (double)counter/(double)input;
+   
+    System.out.println("Batting average: " + average1);
+    
+    System.out.println("Slugging Percentage: " + average);
+        }
+    System.out.println("Another batter? " + "(y/n):");
+    choice = scan1.next();
+    System.out.println();
+        }     
+        
+        
+        while (!choice.equalsIgnoreCase("n"));
+    }
+
+    
+}

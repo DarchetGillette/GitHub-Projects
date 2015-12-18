@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class Lab6 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		String choice = ("y");
+
+		// Greets user
+		System.out.println("Welcome to the Factorial Calculator!");
+
+		// loop will run if the user enters Y
+		while (choice.equalsIgnoreCase("Y")) {
+
+			// variables
+			int integer;
+			int factorial = 1;
+			int d;
+
+			// Allows user to enter integer
+			System.out.println("Enter an integer thats greater than 0 but less than 10:");
+
+			integer = scan.nextInt();
+			
+			// Program will stop if integer entered is greater than 10
+			if (integer > 10){
+				System.out.println("You entered an integer greater than 10 :(");
+				break;
+			}
+			
+			// starts loop
+			for (d = 1; d <= integer; d++) {
+				factorial = d * factorial;
+			}
+
+			// Prints out Answer
+			System.out.println("Your Factorial Number is:" + factorial);
+
+			// Ask user if he/she wants to continue
+			System.out.println("Do you want to continue: (Y/N)");
+			scan.nextLine();
+			choice = scan.nextLine();
+
+		}
+
+	}
+}
